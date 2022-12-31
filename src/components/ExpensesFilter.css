@@ -1,3 +1,6 @@
+body {
+  font-family: Roboto, sans-serif;
+}
 .expenses-filter {
   color: white;
   padding: 0 1rem;
@@ -20,5 +23,7 @@
   font: inherit;
   padding: 0.5rem 3rem;
   font-weight: bold;
+  border: none;
   border-radius: 6px;
+  outline: none;
 }

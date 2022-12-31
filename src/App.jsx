@@ -1,32 +1,32 @@
 import "./App.css";
-
+import { useState } from "react";
 import Expense from "./components/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-const expenses = [
+const DUMMY_EXPENSES = [
   {
     id: "e1",
     title: "Toilet Paper",
-    amount: 94.12,
+    amount: 9400.12,
     date: new Date(2020, 7, 14),
   },
   { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
   {
     id: "e3",
     title: "Car Insurance",
-    amount: 294.67,
+    amount: 299.67,
     date: new Date(2021, 2, 28),
   },
   {
     id: "e23",
     title: "Toyota",
-    amount: 200.67,
+    amount: 203.67,
     date: new Date(2021, 3, 28),
   },
   {
     id: "e4",
     title: "New Desk (Wooden)",
-    amount: 450,
+    amount: 680,
     date: new Date(2021, 5, 12),
   },
   {
@@ -36,12 +36,15 @@ const expenses = [
     date: new Date(2021, 5, 12),
   },
 ];
-const AddExpenseDataHandler = (expense) => {
-  console.log("In App.jsx");
-  console.log(expense);
-};
 
-function App(props) {
+const App = () => {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  const AddExpenseDataHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
   return (
     <>
       <NewExpense onAddExpenseData={AddExpenseDataHandler} />
@@ -51,6 +54,6 @@ function App(props) {
       </div>
     </>
   );
-}
+};
 
 export default App;
