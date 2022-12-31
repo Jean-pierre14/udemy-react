@@ -1,6 +1,11 @@
 .wrapper{
   position: relative;
-  padding: 10px;
+  padding: 20px;
+  background-color: #272727;
+  width: 60%;
+  margin: 20px auto;
+  border-radius: 1rem;
+
 }
 .expense-item {
     display: flex;
