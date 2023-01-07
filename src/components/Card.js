@@ -1,8 +1,10 @@
-function Card(props){
-    const classes = props.className;
-    return(
-        <div className={classes}>{props.children}</div>
-    )
+function Card(props) {
+  const classes = props.className;
+  return (
+    <li>
+      <div className={classes}>{props.children}</div>
+    </li>
+  );
 }
 
 export default Card;
