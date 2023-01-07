@@ -1,7 +1,7 @@
 import React from "react";
 
 const CharBar = () => {
-  return <div></div>;
+  return <div>chart</div>;
 };
 
 export default CharBar;
